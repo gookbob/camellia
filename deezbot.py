@@ -8,7 +8,7 @@ client = discord.Client()
 async def on_ready():
     print(client.user.id)
     print("ready")
-    game = discord.Game("윤모와 ")
+    game = discord.Game("윤모와 영어공부")
     await client.change_presence(status=discord.Status.online, activity=game)
 
 
