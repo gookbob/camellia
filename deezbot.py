@@ -19,7 +19,7 @@ async def on_message(message):
         channel = client.get_channel(630432867683401824)
         await client.get_channel(int(630432867683401824)).send("")
        
-    if message.content.startswith("국밥아")
+    if message.content.startswith("국밥아"):
         await message.channel.send("왜 ㅅㅂ럼아")
 
 
