@@ -21,8 +21,11 @@ async def on_message(message):
        
     if message.content.startswith("국밥아"):
         await message.channel.send("왜 ㅅㅂ럼아")
-
-
+    if message.content.startswith("검사인벤"):
+        await message.channel.send("http://black.inven.co.kr/")
+    if message.content.startswith("검사"):
+        await message.channel.send("https://www.kr.playblackdesert.com/main/index")
+       
 
 
 access_token = os.environ["BOT_TOKEN"]
