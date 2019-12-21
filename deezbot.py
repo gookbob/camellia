@@ -23,7 +23,7 @@ async def on_message(message):
         await message.channel.send("왜 ㅅㅂ럼아")
     if message.content.startswith("검사인벤"):
         await message.channel.send("http://black.inven.co.kr/")
-    if message.content.startswith("검사"):
+    if message.content.startswith("검사공홈"):
         await message.channel.send("https://www.kr.playblackdesert.com/main/index")
        
 
