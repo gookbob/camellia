@@ -8,7 +8,7 @@ client = discord.Client()
 async def on_ready():
     print(client.user.id)
     print("ready")
-    game = discord.Game("윤모와 영어공부")
+    game = discord.Game("메콩중")
     await client.change_presence(status=discord.Status.online, activity=game)
 
 
@@ -21,10 +21,10 @@ async def on_message(message):
        
     if message.content.startswith("국밥아"):
         await message.channel.send("왜 ㅅㅂ럼아")
-    if message.content.startswith("검사인벤"):
-        await message.channel.send("http://black.inven.co.kr/")
-    if message.content.startswith("검사공홈"):
-        await message.channel.send("https://www.kr.playblackdesert.com/main/index")
+    if message.content.startswith("메콩인벤"):
+        await message.channel.send("http://inven.co.kr/maple2/")
+    if message.content.startswith("메콩공홈"):
+        await message.channel.send("http://maplestory2.nexon.com/Main/Index")
 
        
 
