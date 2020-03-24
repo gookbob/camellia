@@ -26,7 +26,7 @@ async def on_message(message):
     if message.content.startswith("메콩공홈"):
         await message.channel.send("http://maplestory2.nexon.com/Main/Index")
     if message.content.startswith("아린아"):
-        await message.channel.send("http://maplestory2.nexon.com/Main/Index")
+        await message.channel.send("뭐해")
 
        
 
