@@ -19,9 +19,9 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    if message.content.startswith("/deezsvon"):
-        channel = client.get_channel(630432867683401824)
-        await client.get_channel(int(630432867683401824)).send("")
+    if message.content.startswith("/학폭위"):
+        channel = client.get_channel(437679614370906122)
+        await client.get_channel(int(437679614370906122)).send("학교폭력대책자치위원회가 열리니 모두 참석해주시길 바랍니다.")
        
     if message.content.startswith("국밥아"):
         await message.channel.send("왜 ㅅㅂ럼아")
