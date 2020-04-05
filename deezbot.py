@@ -23,8 +23,8 @@ async def on_message(message):
         channel = client.get_channel(437679614370906122)
         await client.get_channel(int(437679614370906122)).send("학교폭력대책자치위원회가 열리니 모두 참석해주시길 바랍니다.")
        
-    if message.content.startswith("국밥아"):
-        await message.channel.send("왜 ㅅㅂ럼아")
+    if message.content.startswith("악마야"):
+        await message.channel.send("")
     if message.content.startswith("메콩인벤"):
         await message.channel.send("http://inven.co.kr/maple2/")
     if message.content.startswith("메콩공홈"):
