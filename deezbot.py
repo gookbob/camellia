@@ -26,6 +26,13 @@ async def on_message(message):
         await message.channel.send("http://inven.co.kr/maple2/")
     if message.content.startswith("메콩공홈"):
         await message.channel.send("http://maplestory2.nexon.com/Main/Index")
+        
+       
+async def on_reaction_add(reaction, user):
+    if str(reaction.emoji) == "👍":
+        await reaction.message.channel.send(user .name + "님이 좋아요를 누르셨습니다.")
+    if str(reaction.emoji) == "💩":
+        await reaction.message.channel.send(user .name + "님이 응가를 했습니다.")
        
 
 
