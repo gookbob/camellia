@@ -33,6 +33,10 @@ async def on_reaction_add(reaction, user):
         await reaction.message.channel.send(user .name + "님이 좋아요를 누르셨습니다.")
     if str(reaction.emoji) == "💩":
         await reaction.message.channel.send(user .name + "님이 응가를 했습니다.")
+    if str(reaction.emoji) == "💓":
+        await reaction.message.channel.send(user .name + "님이 하트를 달았습니다.")
+    if str(reaction.emoji) == "💔":
+        await reaction.message.channel.send(user .name + "님이 하트를 .")
        
 
 
