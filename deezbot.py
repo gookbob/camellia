@@ -1,6 +1,9 @@
 import discord
 import os
-
+import requests
+import asyncio
+from json import loads
+import random
 
 
 client = discord.Client()
