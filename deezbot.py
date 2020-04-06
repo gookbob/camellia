@@ -21,7 +21,7 @@ async def on_ready():
 async def on_message(message):
     if message.content.startswith("집합"):
         channel = client.get_channel(437679614370906122)
-        await client.get_channel(int(437679614370906122)).send("```@everyone 집합!!!```")
+        await client.get_channel(int(437679614370906122)).send("@everyone 집합!!!")
     if message.content.startswith("/숙제"):
         await message.channel.send("```바베니일일퀘스트+함선```")
         await message.channel.send("```열쇠 10+3 뽑기```")
