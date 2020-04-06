@@ -22,7 +22,14 @@ async def on_message(message):
     if message.content.startswith("집합"):
         channel = client.get_channel(437679614370906122)
         await client.get_channel(int(437679614370906122)).send("```@everyone 집합!!!```")
-       
+    if message.content.startswith("/숙제"):
+        await message.channel.send("```바베니일일퀘스트+함선```")
+        await message.channel.send("```열쇠 10+3 뽑기```")
+        await message.channel.send("```생활 폐광 1층 10판 (안해두댐)```")
+        await message.channel.send("```바야르 10판```")
+        await message.channel.send("```펫합성```")
+        await message.channel.send("```부캐피파```")
+        await message.channel.send("```길드출석 기부```")
     if message.content.startswith("악마야"):
         await message.channel.send("네")
     if message.content.startswith("무투"):
