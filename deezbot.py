@@ -12,7 +12,7 @@ client = discord.Client()
 async def on_ready():
     print(client.user.id)
     print("ready")
-    game = discord.Game("메1콩")
+    game = discord.Game("메콩")
     await client.change_presence(status=discord.Status.online, activity=game)
 
 
@@ -26,7 +26,7 @@ async def on_message(message):
     if message.content.startswith("악마야"):
         await message.channel.send("네")
     if message.content.startswith("무투"):
-        await message.channel.send("")
+        await message.channel.send("귀요미")
     if message.content.startswith("메콩인벤"):
         await message.channel.send("http://inven.co.kr/maple2/")
     if message.content.startswith("메콩공홈"):
@@ -36,13 +36,17 @@ async def on_message(message):
 @client.event
 async def on_reaction_add(reaction, user):
     if str(reaction.emoji) == "👍":
-        await reaction.message.channel.send("```"+user .name +"님이"+message.author.name+"에게 좋아요를 누르셨습니다.```")
+        await reaction.message.channel.send("```"+user .name +"님이 "+reaction.message.author.name+"에게 좋아요를 누르셨습니다.```")
     if str(reaction.emoji) == "💩":
-        await reaction.message.channel.send("```"+user .name +"님이"+message.author.name+"에게 응가를 했습니다.```")
+        await reaction.message.channel.send("```"+user .name +"님이 "+reaction.message.author.name+"에게 응가를 했습니다.```")
     if str(reaction.emoji) == "💓":
-        await reaction.message.channel.send("```"+user .name +"님이"+message.author.name+"에게 하트를 달았습니다.```")
+        await reaction.message.channel.send("```"+user .name +"님이 "+reaction.message.author.name+"에게 하트를 달았습니다.```")
     if str(reaction.emoji) == "💔":
-        await reaction.message.channel.send("```"+user .name +"님이"+message.author.name+"의 하트를 찢었습니다.```")
+        await reaction.message.channel.send("```"+user .name +"님이 "+reaction.message.author.name+"의 하트를 찢었습니다.```")
+    if str(reaction.emoji) == "💨":
+        await reaction.message.channel.send("```"+user .name +"님이 "+reaction.message.author.name+"을(를) 보고 한숨을 쉽니다.```"
+    if str(reaction.emoji) == "😡":
+        await reaction.message.channel.send("```"+user .name +"님이 "+reaction.message.author.name+"에게 화를 냅니다.```")
         
         
        
