@@ -25,6 +25,8 @@ async def on_message(message):
        
     if message.content.startswith("악마야"):
         await message.channel.send("네")
+    if message.content.startswith("무투"):
+        await message.channel.send("")
     if message.content.startswith("메콩인벤"):
         await message.channel.send("http://inven.co.kr/maple2/")
     if message.content.startswith("메콩공홈"):
