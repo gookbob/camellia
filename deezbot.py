@@ -12,7 +12,7 @@ client = discord.Client()
 async def on_ready():
     print(client.user.id)
     print("ready")
-    game = discord.Game("좆망겜")
+    game = discord.Game("메콩")
     await client.change_presence(status=discord.Status.online, activity=game)
 
 
@@ -23,7 +23,7 @@ async def on_message(message):
         channel = client.get_channel(437679614370906122)
         await client.get_channel(int(437679614370906122)).send("```@everyone 집합!!!```")
        
-    if message.content.startswith("야"):
+    if message.content.startswith("악마야"):
         await message.channel.send("네")
     if message.content.startswith("메콩인벤"):
         await message.channel.send("http://inven.co.kr/maple2/")
