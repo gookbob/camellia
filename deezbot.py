@@ -54,7 +54,21 @@ async def on_reaction_add(reaction, user):
         await reaction.message.channel.send("```"+user .name +"님이 "+reaction.message.author.name+"을(를) 보고 한숨을 쉽니다.```")
     if str(reaction.emoji) == "😡":
         await reaction.message.channel.send("```"+user .name +"님이 "+reaction.message.author.name+"에게 화를 냅니다.```")
-
+    if str(reaction.emoji) == "💋":
+        await reaction.message.channel.send("```"+user .name +"님이 "+reaction.message.author.name+"에게 키스를 갈깁니다.```")
+    if str(reaction.emoji) == "📐":
+        await reaction.message.channel.send("```"+user .name +"님이 "+reaction.message.author.name+"의 머리를 삼각자로 찍었습니다.```")
+    if str(reaction.emoji) == "🔑":
+        await reaction.message.channel.send("```"+user .name +"님이 "+reaction.message.author.name+"에게 집열쇠를 건넵니다.```")
+    if str(reaction.emoji) == "🔇":
+        await reaction.message.channel.send("```"+user .name +"님이 "+reaction.message.author.name+"에게 닥치라고 합니다.```")
+    if str(reaction.emoji) == "👅":
+        await reaction.message.channel.send("```"+user .name +"님이 "+reaction.message.author.name+"을(를) 혀로 햝습니다.```")
+    if str(reaction.emoji) == "👌":
+        await reaction.message.channel.send("```"+user .name +"님이 "+reaction.message.author.name+"에게 ```")
+        
+        
+    
         
 @client.event
 async def on_member_join(member):
