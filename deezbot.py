@@ -12,7 +12,7 @@ client = discord.Client()
 async def on_ready():
     print(client.user.id)
     print("ready")
-    game = discord.Game("메콩")
+    game = discord.Game("메1콩")
     await client.change_presence(status=discord.Status.online, activity=game)
 
 
@@ -34,13 +34,13 @@ async def on_message(message):
 @client.event
 async def on_reaction_add(reaction, user):
     if str(reaction.emoji) == "👍":
-        await reaction.message.channel.send("```"+user .name + "님이"+message.author.name+"에게 좋아요를 누르셨습니다.```")
+        await reaction.message.channel.send("```"+user .name +"님이"+message.author.name+"에게 좋아요를 누르셨습니다.```")
     if str(reaction.emoji) == "💩":
-        await reaction.message.channel.send("```"+user .name + "님이"+message.author.name+"에게 응가를 했습니다.```")
+        await reaction.message.channel.send("```"+user .name +"님이"+message.author.name+"에게 응가를 했습니다.```")
     if str(reaction.emoji) == "💓":
-        await reaction.message.channel.send("```"+user .name + "님이"+message.author.name+"에게 하트를 달았습니다.```")
+        await reaction.message.channel.send("```"+user .name +"님이"+message.author.name+"에게 하트를 달았습니다.```")
     if str(reaction.emoji) == "💔":
-        await reaction.message.channel.send("```"+user .name + "님이"+message.author.name+"의 하트를 찢었습니다.```")
+        await reaction.message.channel.send("```"+user .name +"님이"+message.author.name+"의 하트를 찢었습니다.```")
         
         
        
