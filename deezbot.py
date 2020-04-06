@@ -51,7 +51,7 @@ async def on_reaction_add(reaction, user):
     if str(reaction.emoji) == "💔":
         await reaction.message.channel.send("```"+user .name +"님이 "+reaction.message.author.name+"의 하트를 찢었습니다.```")
     if str(reaction.emoji) == "💨":
-        await reaction.message.channel.send("```"+user .name +"님이 "+reaction.message.author.name+"을(를) 보고 한숨을 쉽니다.```"
+        await reaction.message.channel.send("```"+user .name +"님이 "+reaction.message.author.name+"을(를) 보고 한숨을 쉽니다.```")
 
         
         
