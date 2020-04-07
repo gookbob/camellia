@@ -38,6 +38,8 @@ async def on_message(message):
         await message.channel.send("http://inven.co.kr/maple2/")
     if message.content.startswith("메콩공홈"):
         await message.channel.send("http://maplestory2.nexon.com/Main/Index")
+    if message.content.startswith("연장챙겨"):
+        await message.channel.send("넵🔧🔨🔪")
         
 
 @client.event
@@ -65,7 +67,9 @@ async def on_reaction_add(reaction, user):
     if str(reaction.emoji) == "👅":
         await reaction.message.channel.send("```"+user .name +"님이 "+reaction.message.author.name+"을(를) 혀로 햝습니다.```")
     if str(reaction.emoji) == "👌":
-        await reaction.message.channel.send("```"+user .name +"님이 "+reaction.message.author.name+"에게 ```")
+        await reaction.message.channel.send("```"+user .name +"님이 "+reaction.message.author.name+"에게 알겠다고 합니다. ```")
+    if str(reaction.emoji) == "🔨":
+        await reaction.message.channel.send("```"+user .name +" "+reaction.message.author.name+"의 뚝배기를 깼다!!!!! ```")
         
         
     
