@@ -23,7 +23,7 @@ async def on_message(message):
         channel = client.get_channel(437679614370906122)
         await client.get_channel(int(437679614370906122)).send("@everyone 집합!!!")
     if message.content.startswith("/숙제"):
-        await message.channel.send("```바베니일일퀘스트+함선```")
+        await message.channel.send("```바베니일일퀘스트+함선```)
         await message.channel.send("```열쇠 10+3 뽑기```")
         await message.channel.send("```생활 폐광 1층 10판 (안해두댐)```")
         await message.channel.send("```바야르 10판```")
@@ -38,6 +38,10 @@ async def on_message(message):
         await message.channel.send("http://inven.co.kr/maple2/")
     if message.content.startswith("메콩공홈"):
         await message.channel.send("http://maplestory2.nexon.com/Main/Index")
+    if message.content.startswith("멭갤"):
+        await message.channel.send("https://gall.dcinside.com/board/lists/?id=maplestory2")
+    if message.content.startswith("모갤"):
+        await message.channel.send("https://gall.dcinside.com/mgallery/board/lists/?id=ms2")        
     if message.content.startswith("연장챙겨"):
         await message.channel.send("넵🔧🔨🔪")
         
@@ -69,7 +73,7 @@ async def on_reaction_add(reaction, user):
     if str(reaction.emoji) == "👌":
         await reaction.message.channel.send("```"+user .name +"님이 "+reaction.message.author.name+"에게 알겠다고 합니다. ```")
     if str(reaction.emoji) == "🔨":
-        await reaction.message.channel.send("```"+user .name +" "+reaction.message.author.name+"의 뚝배기를 깼다!!!!! ```")
+        await reaction.message.channel.send("```"+user .name +"가"+reaction.message.author.name+"의 뚝배기를 깼다!!!!! ```")
         
         
     
