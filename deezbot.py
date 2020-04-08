@@ -73,7 +73,7 @@ async def on_reaction_add(reaction, user):
     if str(reaction.emoji) == "👌":
         await reaction.message.channel.send("```"+user .name +"님이 "+reaction.message.author.name+"에게 알겠다고 합니다. ```")
     if str(reaction.emoji) == "🔨":
-        await reaction.message.channel.send("```"+user .name +"가"+reaction.message.author.name+"의 뚝배기를 깼다!!!!! ```")
+        await reaction.message.channel.send("```"+user .name +"가 "+reaction.message.author.name+"의 뚝배기를 깼다!!!!! ```")
         
         
     
