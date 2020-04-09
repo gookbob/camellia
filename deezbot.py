@@ -12,7 +12,7 @@ client = discord.Client()
 async def on_ready():
     print(client.user.id)
     print("ready")
-    game = discord.Game("메2콩")
+    game = discord.Game("메콩")
     await client.change_presence(status=discord.Status.online, activity=game)
 
 
@@ -68,12 +68,8 @@ async def on_reaction_add(reaction, user):
         await reaction.message.channel.send("```"+user .name +"님이 "+reaction.message.author.name+"을(를) 혀로 햝습니다.```")
     if str(reaction.emoji) == "👌":
         await reaction.message.channel.send("```"+user .name +"님이 "+reaction.message.author.name+"에게 알겠다고 합니다. ```")
-    if str(reaction.emoji) == "🔨":
-        await reaction.message.channel.send("```"+user .name +"가 "+reaction.message.author.name+"의 뚝배기를 깼다!!!!! ```")
-        
-        
-    
-        
+
+                                   
 @client.event
 async def on_member_join(member):
     fmt = '{0.mention}님 {1.name}에 입학하신 것을 환영합니다. 왼쪽 메뉴에서 칼을 누르세요.'.format(member, member.guild)
