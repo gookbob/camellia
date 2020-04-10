@@ -43,7 +43,13 @@ async def on_message(message):
     if message.content.startswith("멭갤"):
         await message.channel.send("https://gall.dcinside.com/board/lists/?id=maplestory2")     
     if message.content.startswith("모갤"):
-        await message.channel.send("https://gall.dcinside.com/mgallery/board/lists/?id=ms2")     
+        await message.channel.send("https://gall.dcinside.com/mgallery/board/lists/?id=ms2") 
+    if message.content == "/임베드":
+        embed = discord.Embed(title="지옥 학교에 오신걸 환영합니다.", description="입학을 원한다면 🔪을 누르세요", color=0x000000)
+        embed.set_image(url="https://i.imgur.com/nvrWwoj.png")
+        embed.set_thumbnail(url="https://i.imgur.com/1YsasKB.png")
+        embed.set_footer(text="발신자 : 양치맨#4518", icon_url="https://i.imgur.com/3OpkEyM.png")
+        await message.channel.send("", embed=embed)
         
 
 @client.event
