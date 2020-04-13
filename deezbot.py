@@ -51,7 +51,7 @@ async def on_message(message):
         embed.set_footer(text="발신자 : 양치맨#4518", icon_url="https://i.imgur.com/3OpkEyM.png")
         await message.channel.send("", embed=embed)
     if message.content == "/임베드2":
-        embed = discord.Embed(title="이곳은 학교 뒷골목입니다.", description="🏃모범학생 이상만 채팅칠 수 있습니다.", color=#00FF00)
+        embed = discord.Embed(title="이곳은 학교 뒷골목입니다.", description="🏃모범학생 이상만 채팅칠 수 있습니다.", color=000FF00)
         embed.set_footer(text="발신자 : 양치맨#4518", icon_url="https://i.imgur.com/3OpkEyM.png")
         await message.channel.send("", embed=embed)
         
