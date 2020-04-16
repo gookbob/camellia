@@ -12,7 +12,7 @@ client = discord.Client()
 async def on_ready():
     print(client.user.id)
     print("ready")
-    game = discord.Game("메1콩")
+    game = discord.Game("메콩")
     await client.change_presence(status=discord.Status.online, activity=game)
 
 
@@ -56,7 +56,7 @@ async def on_message(message):
         await message.channel.send("", embed=embed)
     if message.content == "/마이쮸":
         embed = discord.Embed(title="마이쮸 학교에 오신걸 환영합니다.", description="입학을 원한다면 🔪을 누르세요", color=0x000000)
-        embed.set_image(url="https://https://i.imgur.com/VBZ4Ps5.png")
+        embed.set_image(url="https://i.imgur.com/VBZ4Ps5.png")
         embed.set_thumbnail(url="https://i.imgur.com/1YsasKB.png")
         embed.set_footer(text="발신자 : 양치맨#4518", icon_url="https://i.imgur.com/3OpkEyM.png")
         await message.channel.send("", embed=embed)   
