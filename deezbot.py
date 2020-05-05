@@ -38,7 +38,7 @@ async def on_message(message):
         embed = discord.Embed(title="지옥 학교에 오신걸 환영합니다.", description="입학을 원한다면 🔪을 누르세요", color=0x000000)
         embed.set_image(url="https://i.imgur.com/nvrWwoj.png")
         embed.set_thumbnail(url="https://i.imgur.com/1YsasKB.png")
-        embed.set_footer(text="발신자 : 양치맨#4518", icon_url="https://i.imgur.com/3OpkEyM.png")
+        embed.set_footer(text="발신자 : 양치맨#7777", icon_url="https://i.imgur.com/3OpkEyM.png")
         await message.channel.send("", embed=embed)
     if message.content == "/임베드2":
         embed = discord.Embed(title="이곳은 학교 뒷골목입니다.", description="🏃모범학생 이상만 채팅칠 수 있습니다.", color=0x00FF00)
@@ -58,7 +58,7 @@ async def on_message(message):
         부캐 피파
         길드출석 기부""", inline=False)
         embed.set_thumbnail(url="https://i.imgur.com/1YsasKB.png")
-        embed.set_footer(text="발신자 : 양치맨#4518", icon_url="https://i.imgur.com/3OpkEyM.png")
+        embed.set_footer(text="발신자 : 양치맨#7777", icon_url="https://i.imgur.com/3OpkEyM.png")
         await message.channel.send("", embed=embed)
     if message.content == "q":
         embed = discord.Embed(title="", description="", color=0x000000)
