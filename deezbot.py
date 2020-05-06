@@ -34,6 +34,8 @@ async def on_message(message):
         await message.channel.send("https://gall.dcinside.com/board/lists/?id=maplestory2")
     if message.content.startswith("모갤"):
         await message.channel.send("https://gall.dcinside.com/mgallery/board/lists/?id=ms2")
+    if message.content.startswith("/"):
+        await message.channel.send("```도배가 감지되어 자동 뮤트 되었습니다.```")
     if message.content == "/임베드":
         embed = discord.Embed(title="지옥 학교에 오신걸 환영합니다.", description="입학을 원한다면 🔪을 누르세요", color=0x000000)
         embed.set_image(url="https://i.imgur.com/nvrWwoj.png")
