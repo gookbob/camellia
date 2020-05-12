@@ -315,7 +315,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                     embed.add_field(name='솔로랭크 : '+SoloRankTier, value=SoloRankPointAndWinRatio, inline=False)
                     embed.add_field(name="자유랭크 : Unranked", value="Unranked", inline=False)
                     embed.add_field(name="모스트 챔피언 : " + mostUsedChampion,
-                                    value="KDA : " + mostUsedChampionKDA + " / " + "승률 : " + mostUsedChampionWinRate,
+                                    value="KDA : " + mostUsedChampionKDA + " / " + "Win Rate : " + mostUsedChampionWinRate,
                                     inline=False)
                     embed.add_field(name="op.gg 주소", value=opggsummonersearch + playerNickname,
                                     inline=False)
@@ -349,7 +349,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                     embed.add_field(name='솔로랭크 : '+SoloRankTier, value=SoloRankPointAndWinRatio, inline=False)
                     embed.add_field(name='자유랭크 : '+FlexRankTier, value=FlexRankPointAndWinRatio, inline=False)
                     embed.add_field(name="모스트 챔피언 : " + mostUsedChampion,
-                                    value="KDA : " + mostUsedChampionKDA + " / " + " 승률 : " + mostUsedChampionWinRate,
+                                    value="KDA : " + mostUsedChampionKDA + " / " + " Win Rate : " + mostUsedChampionWinRate,
                                     inline=False)
                     if cmpTier == 0:
                         embed.set_thumbnail(url='https:' + RankMedal[0]['src'])
