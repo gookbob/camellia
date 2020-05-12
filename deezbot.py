@@ -283,7 +283,7 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                     mostUsedChampionWinRate = mostUsedChampionWinRate.div.text.strip()
 
                     FlexRankTier = flexrank_Types_and_Tier_Info[0] + ' : ' + flexrank_Types_and_Tier_Info[1]
-                    FlexRankPointAndWinRatio = flexrank_Types_and_Tier_Info[2] + " /" + flexrank_Types_and_Tier_Info[-1]
+                    FlexRankPointAndWinRatio = flexrank_Types_and_Tier_Info[2] + " / " + flexrank_Types_and_Tier_Info[-1]
                     embed = discord.Embed(title="📄 소환사 " + playerNickname + "님의 전적", description="", color=0x0080FF)
                     embed.add_field(name="솔로랭크 : Unranked", value="Unranked", inline=False)
                     embed.add_field(name='자유랭크 : '+FlexRankTier, value=FlexRankPointAndWinRatio, inline=False)
@@ -309,8 +309,8 @@ async def on_message(message): # on_message() event : when the bot has recieved 
                     mostUsedChampionWinRate = mostUsedChampionWinRate.div.text.strip()
 
                     SoloRankTier = solorank_Types_and_Tier_Info[0] + ' : ' + solorank_Types_and_Tier_Info[1]
-                    SoloRankPointAndWinRatio = solorank_Point_and_winratio[0] + "/ " + solorank_Point_and_winratio[
-                        1] + " " + solorank_Point_and_winratio[2] + " /" + solorank_Point_and_winratio[3]
+                    SoloRankPointAndWinRatio = solorank_Point_and_winratio[0] + " / " + solorank_Point_and_winratio[
+                        1] + " " + solorank_Point_and_winratio[2] + " / " + solorank_Point_and_winratio[3]
                     embed = discord.Embed(title="📄 소환사 " + playerNickname + "님의 전적", description="", color=0x0080FF)
                     embed.add_field(name='솔로랭크 : '+SoloRankTier, value=SoloRankPointAndWinRatio, inline=False)
                     embed.add_field(name="자유랭크 : Unranked", value="Unranked", inline=False)
@@ -331,10 +331,10 @@ async def on_message(message): # on_message() event : when the bot has recieved 
 
                     # Make State
                     SoloRankTier =solorank_Types_and_Tier_Info[0]
-                    SoloRankPointAndWinRatio = solorank_Point_and_winratio[0] + "/ " + solorank_Point_and_winratio[
-                        1] + " " + solorank_Point_and_winratio[2] + " /" + solorank_Point_and_winratio[3]
+                    SoloRankPointAndWinRatio = solorank_Point_and_winratio[0] + " / " + solorank_Point_and_winratio[
+                        1] + " " + solorank_Point_and_winratio[2] + " / " + solorank_Point_and_winratio[3]
                     FlexRankTier =flexrank_Types_and_Tier_Info[0]
-                    FlexRankPointAndWinRatio = flexrank_Types_and_Tier_Info[2] + " /" + flexrank_Types_and_Tier_Info[-1]
+                    FlexRankPointAndWinRatio = flexrank_Types_and_Tier_Info[2] + " / " + flexrank_Types_and_Tier_Info[-1]
 
                     # most Used Champion Information : Champion Name, KDA, Win Rate
                     mostUsedChampion = bs.find('div', {'class': 'ChampionName'})
