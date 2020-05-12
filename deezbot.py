@@ -380,8 +380,8 @@ async def on_message(message): # on_message() event : when the bot has recieved 
         except AttributeError as e:
             embed = discord.Embed(title="존재하지 않는 소환사", description="", color=0x5CD1E5)
             embed.add_field(name="OP.GG에 등록되지 않은 소환사입니다.", value="오타를 확인 후 다시 검색해주세요.", inline=False)
-            embed.set_footer(text='Service provided by Hoplin.',
-                             icon_url='https://avatars2.githubusercontent.com/u/45956041?s=460&u=1caf3b112111cbd9849a2b95a88c3a8f3a15ecfa&v=4')
+            embed.set_footer(text='제작 : 양치맨#7777',
+                             icon_url='https://i.imgur.com/3OpkEyM.png')
             await message.channel.send("Error : Non existing Summoner ", embed=embed)
 
 access_token = os.environ["BOT_TOKEN"]
