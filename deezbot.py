@@ -64,14 +64,6 @@ async def on_reaction_add(reaction, user):
         await reaction.message.channel.send("```" + user.name + "이 " + reaction.message.author.name + "의 뚝배기를 깹니다. ```")
 
 
-@client.event
-async def on_member_join(member):
-    fmt = '{0.mention}님 {1.name}에 입학하신 것을 환영합니다. 왼쪽 메뉴에서 칼을 누르세요.'.format(member, member.guild)
-    channel = member.guild.get_channel(696579283547848734)
-    await channel.send(fmt)
-    fmt = '@everyone 새로운 전학생 {0.mention}님이 {1.name}에 입학하셨습니다. 환영해주세요.'.format(member, member.guild)
-    channel = member.guild.get_channel(547980454398132252)
-    await channel.send(fmt)
 
 tierScore = {
     'default' : 0,
@@ -374,6 +366,16 @@ async def on_message(message):
         embed = discord.Embed(title="", description="", color=0x000000)
         embed.set_image(url="https://i.imgur.com/89M4LRh.gif")
         await message.channel.send("", embed=embed)
+        
+@client.event
+async def on_member_join(member):
+    fmt = '{0.mention}님 {1.name}에 입학하신 것을 환영합니다. 왼쪽 메뉴에서 칼을 누르세요.'.format(member, member.guild)
+    channel = member.guild.get_channel(696579283547848734)
+    await channel.send(fmt)
+    fmt = '@everyone 새로운 전학생 {0.mention}님이 {1.name}에 입학하셨습니다. 환영해주세요.'.format(member, member.guild)
+    channel = member.guild.get_channel(547980454398132252)
+    await channel.send(fmt)
+
 
 
 access_token = os.environ["BOT_TOKEN"]
