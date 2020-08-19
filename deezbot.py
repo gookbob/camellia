@@ -378,4 +378,4 @@ async def on_member_join(member):
 
 
 
-client.run(os.environ['token'])
+client.run('token')
