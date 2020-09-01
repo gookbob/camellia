@@ -331,7 +331,7 @@ async def on_message(message):
         열쇠 10 + 3 뽑기
         생활기술
         폐광 1층 10판
-         10판
+        발록 10판
         펫합성
         부캐 피파
         길드출석 기부""", inline=False)
