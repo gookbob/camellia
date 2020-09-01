@@ -313,7 +313,7 @@ async def on_message(message):
         channel = client.get_channel(547980454398132252)
         await client.get_channel(int(547980454398132252)).send("```도배가 감지되어 자동 뮤트 되었습니다.```")
     if message.content == "/임베드":
-        embed = discord.Embed(title="지옥 학교에 오신걸 환영합니다.", description="입대를 하시려면 🔪을 누르세요", color=0x000000)
+        embed = discord.Embed(title="사이버 UDT에 오신걸 환영합니다.", description="입대를 하시려면 🔪을 누르세요", color=0x000000)
         embed.set_image(url="https://i.imgur.com/nvrWwoj.png")
         embed.set_thumbnail(url="https://i.imgur.com/RKAV9GX.png")
         embed.set_footer(text="발신자 : 윤모#7777", icon_url="https://i.imgur.com/3OpkEyM.png")
