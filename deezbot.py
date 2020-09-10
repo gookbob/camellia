@@ -322,7 +322,21 @@ async def on_message(message):
         embed = discord.Embed(title="이곳은 학교 뒷골목입니다.", description="🏃모범학생 이상만 채팅칠 수 있습니다.", color=0x00FF00)
         embed.set_footer(text="발신자 : 양치맨#4518", icon_url="https://i.imgur.com/3OpkEyM.png")
         await message.channel.send("", embed=embed)
-    if message.content.startswith("/숙제"):
+    if message.content.startswith("/로아"):
+        embed = discord.Embed(title="로아숙제", description="", color=0xFF0000)
+        embed.add_field(name="주간", value=""주간 에포나, 주간 레이드
+        어비스 던전, 어비스 레이드
+        * 주간 레이드, 어비스 던전, 레이드는 주 1회씩 갈 수 있는데 모든 컨텐츠를 1회씩 가능""", inline=False)
+        embed.add_field(name="일간", value="""레이드 수확 2회
+        카오스 던전 2회
+        에포나 3회
+        * 레이드, 카던, 에포나는 휴식 보너스 활용하면 그날 쉬어도 50%는 돌려받을수있음
+        + 생활의 기운 소모
+        + 영지 활동력 소모 (파견)""", inline=False)
+        embed.set_thumbnail(url="https://i.imgur.com/Z6owaEO.jpg")
+        embed.set_footer(text="발신자 : 양치맨#7777", icon_url="https://i.imgur.com/3OpkEyM.png")
+        await message.channel.send("", embed=embed)
+        if message.content.startswith("/숙제"):
         embed = discord.Embed(title="메콩숙제", description="", color=0x00FF00)
         embed.add_field(name="주간", value="""바베니 주간퀘스트, 라펜샤드 구매
         50, 60, 70카오스, 폐광 4층
