@@ -338,7 +338,7 @@ async def on_message(message):
         embed.set_thumbnail(url="https://i.imgur.com/1YsasKB.png")
         embed.set_footer(text="발신자 : 양치맨#7777", icon_url="https://i.imgur.com/3OpkEyM.png")
         await message.channel.send("", embed=embed)
-        if message.content.startswith("/로아숙제"):
+    if message.content.startswith("/로아숙제"):
         embed = discord.Embed(title="로아숙제", description="", color=0xFF0000)
         embed.add_field(name="주간", value="""주간 에포나, 주간 레이드
         어비스 던전, 어비스 레이드
@@ -349,9 +349,6 @@ async def on_message(message):
         * 레이드, 카던, 에포나는 휴식 보너스 활용하면 그날 쉬어도 50%는 돌려받을수있음
         + 생활의 기운 소모
         + 영지 활동력 소모 (파견)""", inline=False)
-        embed.set_thumbnail(url="https://i.imgur.com/Z6owaEO.jpg")
-        embed.set_footer(text="발신자 : 양치맨#7777", icon_url="https://i.imgur.com/3OpkEyM.png")
-        await message.channel.send("", embed=embed)
     if message.content == "q":
         embed = discord.Embed(title="", description="", color=0x000000)
         embed.set_image(url="https://i.imgur.com/5cQ7UrP.gif")
