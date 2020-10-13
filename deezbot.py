@@ -1,5 +1,5 @@
 import discord
-intents = discord.Intents.default()
+intents = discord.Intents(messages=True, guilds=True)
 intents.members = True
 import os
 from discord.ext import commands
