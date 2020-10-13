@@ -1,4 +1,6 @@
 import discord
+intents = discord.Intents.default()
+intents.members = True
 import os
 from discord.ext import commands
 from urllib.request import URLError
