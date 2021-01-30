@@ -1,1 +1,1 @@
-worker: python bot/deezbot.py
+worker: python deezbot.py
