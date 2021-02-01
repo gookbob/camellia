@@ -22,6 +22,13 @@ async def on_ready():
     print("ready")
     game = discord.Game("UDT 훈련")
     await client.change_presence(status=discord.Status.online, activity=game)
+    
+
+@client.event
+async def on_member_join(member):
+    fmt = '{0.mention}님 {1.name}에 오신 것을 환영합니다. 왼쪽 메뉴 #🔪│입대신청을 눌러주세요.'.format(member, member.guild)
+    channel = client.get_channel(696579283547848734)
+    await channel.send(fmt)
 
 
 @client.event
@@ -64,12 +71,6 @@ async def on_reaction_add(reaction, user):
     if str(reaction.emoji) == "🔨":
         await reaction.message.channel.send("```" + user.name + "이 " + reaction.message.author.name + "의 뚝배기를 깹니다. ```")
 
-
-@client.event
-async def on_member_join(member):
-    fmt = '{0.mention}님 {1.name}에 오신 것을 환영합니다. 왼쪽 메뉴 #🔪│입대신청을 눌러주세요.'.format(member, member.guild)
-    channel = client.get_channel(696579283547848734)
-    await channel.send(fmt)
 
 
 access_token = os.environ["BOT_TOKEN"]
