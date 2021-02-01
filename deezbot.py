@@ -405,6 +405,15 @@ async def on_member_join(member):
     fmt = '@everyone 새로운 전학생 {0.mention}님이 {1.name}에 입학하셨습니다. 환영해주세요.'.format(member, member.guild)
     channel = member.guild.get_channel(711174205957472307)
     await channel.send(fmt)
+    
+    
+@client.event
+async def on_member_join(member):
+    print("Recognized that " + member.name + " joined")
+    await client.send_message(member, newUserDMMessage)
+    await client.send_message(discord.Object(id='CHANNELID'), 'Welcome!')
+    print("Sent message to " + member.name)
+    print("Sent message about " + member.name + " to #CHANNEL")
 
     
 access_token = os.environ["BOT_TOKEN"]
