@@ -70,7 +70,7 @@ async def on_reaction_add(reaction, user):
     channel = client.get_channel(696579283547848734)
     await channel.send(fmt)
     fmt = '@everyone 새로운 전학생 {0.mention}님이 {1.name}에 입학하셨습니다. 환영해주세요.'.format(member, member.guild)
-    channel = member.guild.get_channel(782259746257633350)
+    channel = client.get_channel(782259746257633350)
     await client.send(fmt)
 
 tierScore = {
