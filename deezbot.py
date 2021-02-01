@@ -20,8 +20,9 @@ client = discord.Client()
 async def on_ready():
     print(client.user.id)
     print("ready")
-    game = discord.Game("udt 훈련")
+    game = discord.Game("udt ")
     await client.change_presence(status=discord.Status.online, activity=game)
+
 
 @client.event
 async def on_reaction_add(reaction, user):
@@ -62,7 +63,8 @@ async def on_reaction_add(reaction, user):
             "```" + user.name + "님이 " + reaction.message.author.name + "에게 알겠다고 합니다. ```")
     if str(reaction.emoji) == "🔨":
         await reaction.message.channel.send("```" + user.name + "이 " + reaction.message.author.name + "의 뚝배기를 깹니다. ```")
-      
+
+
 @client.event
 async def on_member_join(member):
     fmt = '{0.mention}님 {1.name}에 오신 것을 환영합니다. 왼쪽 메뉴 #🔪│입대신청을 눌러주세요.'.format(member, member.guild)
@@ -73,31 +75,33 @@ async def on_member_join(member):
     await channel.send(fmt)
 
 
-
 tierScore = {
-    'default' : 0,
-    'iron' : 1,
-    'bronze' : 2,
-    'silver' : 3,
-    'gold' : 4,
-    'platinum' : 5,
-    'diamond' : 6,
-    'master' : 7,
-    'grandmaster' : 8,
-    'challenger' : 9
+    'default': 0,
+    'iron': 1,
+    'bronze': 2,
+    'silver': 3,
+    'gold': 4,
+    'platinum': 5,
+    'diamond': 6,
+    'master': 7,
+    'grandmaster': 8,
+    'challenger': 9
 }
-def tierCompare(solorank,flexrank):
+
+
+def tierCompare(solorank, flexrank):
     if tierScore[solorank] > tierScore[flexrank]:
         return 0
     elif tierScore[solorank] < tierScore[flexrank]:
         return 1
     else:
         return 2
+
+
 warnings.filterwarnings(action='ignore')
 bot = commands.Bot(command_prefix='!')
 
 opggsummonersearch = 'https://www.op.gg/summoner/userName='
-
 
 '''
 Simple Introduction about asyncio
@@ -117,16 +121,16 @@ loop.close()
 '''
 
 
-
 def deleteTags(htmls):
     for a in range(len(htmls)):
-        htmls[a] = re.sub('<.+?>','',str(htmls[a]),0).strip()
+        htmls[a] = re.sub('<.+?>', '', str(htmls[a]), 0).strip()
     return htmls
 
 
 @bot.command()
-async def test(ctx,arg):
+async def test(ctx, arg):
     await ctx.send(arg)
+
 
 @client.event
 async def on_message(message):
@@ -152,7 +156,8 @@ async def on_message(message):
                 # PC의 설정된 환경 혹은 OS플랫폼에 따라서 ContentWrap tabItems의 띄어쓰기가 인식이
 
                 Medal = bs.find('div', {'class': 'SideContent'})
-                RankMedal = Medal.findAll('img', {'src': re.compile('\/\/[a-z]*\-[A-Za-z]*\.[A-Za-z]*\.[A-Za-z]*\/[A-Za-z]*\/[A-Za-z]*\/[a-z0-9_]*\.png')})
+                RankMedal = Medal.findAll('img', {'src': re.compile(
+                    '\/\/[a-z]*\-[A-Za-z]*\.[A-Za-z]*\.[A-Za-z]*\/[A-Za-z]*\/[A-Za-z]*\/[a-z0-9_]*\.png')})
                 # Variable RankMedal's index 0 : Solo Rank
                 # Variable RankMedal's index 1 : Flexible 5v5 rank
 
@@ -226,11 +231,11 @@ async def on_message(message):
                     mostUsedChampionWinRate = bs.find('div', {'class': "Played"})
                     mostUsedChampionWinRate = mostUsedChampionWinRate.div.text.strip()
 
-                    SoloRankTier =' : ' + solorank_Types_and_Tier_Info[1]
+                    SoloRankTier = ' : ' + solorank_Types_and_Tier_Info[1]
                     SoloRankPointAndWinRatio = solorank_Point_and_winratio[0] + " / " + solorank_Point_and_winratio[
                         1] + " " + solorank_Point_and_winratio[2] + " / " + solorank_Point_and_winratio[3]
                     embed = discord.Embed(title="소환사 " + playerNickname + "님의 전적", description="", color=0x0080FF)
-                    embed.add_field(name='솔로랭크'+SoloRankTier, value=SoloRankPointAndWinRatio, inline=False)
+                    embed.add_field(name='솔로랭크' + SoloRankTier, value=SoloRankPointAndWinRatio, inline=False)
                     embed.add_field(name="자유랭크 : Unranked", value="Unranked", inline=False)
                     embed.add_field(name="모스트 챔피언 : " + mostUsedChampion,
                                     value="KDA : " + mostUsedChampionKDA + " / " + "WinRate : " + mostUsedChampionWinRate,
@@ -252,7 +257,8 @@ async def on_message(message):
                     SoloRankPointAndWinRatio = solorank_Point_and_winratio[0] + " / " + solorank_Point_and_winratio[
                         1] + " " + solorank_Point_and_winratio[2] + " / " + solorank_Point_and_winratio[3]
                     FlexRankTier = ' : ' + flexrank_Types_and_Tier_Info[1]
-                    FlexRankPointAndWinRatio = flexrank_Types_and_Tier_Info[2] + " / " + flexrank_Types_and_Tier_Info[-1]
+                    FlexRankPointAndWinRatio = flexrank_Types_and_Tier_Info[2] + " / " + flexrank_Types_and_Tier_Info[
+                        -1]
 
                     # most Used Champion Information : Champion Name, KDA, Win Rate
                     mostUsedChampion = bs.find('div', {'class': 'ChampionName'})
@@ -264,8 +270,8 @@ async def on_message(message):
 
                     cmpTier = tierCompare(solorankmedal[0], flexrankmedal[0])
                     embed = discord.Embed(title="소환사 " + playerNickname + "님의 전적", description="", color=0x0080FF)
-                    embed.add_field(name='솔로랭크'+SoloRankTier, value=SoloRankPointAndWinRatio, inline=False)
-                    embed.add_field(name='자유랭크'+FlexRankTier, value=FlexRankPointAndWinRatio, inline=False)
+                    embed.add_field(name='솔로랭크' + SoloRankTier, value=SoloRankPointAndWinRatio, inline=False)
+                    embed.add_field(name='자유랭크' + FlexRankTier, value=FlexRankPointAndWinRatio, inline=False)
                     embed.add_field(name="모스트 챔피언 : " + mostUsedChampion,
                                     value="KDA : " + mostUsedChampionKDA + " / " + " WinRate : " + mostUsedChampionWinRate,
                                     inline=False)
@@ -282,7 +288,7 @@ async def on_message(message):
                             embed.set_thumbnail(url='https:' + RankMedal[0]['src'])
 
                     embed.add_field(name="op.gg 주소", value=opggsummonersearch + playerNickname,
-                                            inline=False)
+                                    inline=False)
                     embed.set_footer(text='제작 : 양치맨#7777',
                                      icon_url='https://i.imgur.com/3OpkEyM.png')
                     await message.channel.send("", embed=embed)
@@ -389,14 +395,17 @@ async def on_message(message):
         embed = discord.Embed(title="", description="", color=0x000000)
         embed.set_image(url="https://i.imgur.com/89M4LRh.gif")
         await message.channel.send("", embed=embed)
-        
+
+
 @client.event
 async def on_member_join(member):
     fmt = '{0.mention}님 {1.name}에 오신 것을 환영합니다. 왼쪽 메뉴 #🔪│입대신청을 눌러주세요.'.format(member, member.guild)
     channel = member.guild.get_channel(696579283547848734)
     await channel.send(fmt)
+    fmt = '@everyone 새로운 전학생 {0.mention}님이 {1.name}에 입학하셨습니다. 환영해주세요.'.format(member, member.guild)
+    channel = member.guild.get_channel(711174205957472307)
+    await channel.send(fmt)
 
-
-
+    
 access_token = os.environ["BOT_TOKEN"]
 client.run(access_token)
