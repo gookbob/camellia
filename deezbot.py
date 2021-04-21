@@ -71,7 +71,7 @@ async def on_member_join(member):
     channel = client.get_channel(696579283547848734)
     await channel.send(fmt)
     fmt = '@everyone 새로운 전학생 {0.mention}님이 {1.name}에 입학하셨습니다. 환영해주세요.'.format(member, member.guild)
-    channel = client.get_channel(819896579271950406)
+    channel = client.get_channel(833412228530176100)
     await channel.send(fmt)
 
 
