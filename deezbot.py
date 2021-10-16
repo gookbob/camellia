@@ -30,8 +30,8 @@ async def on_message(message):
 
     if message.content == "임베드":
         embed = discord.Embed(title="카멜리아 스토리에 오신 것을 환영합니다.", description='''🌸를 누르시면 멤버 권한이 들어옵니다.
-                              게임을 악용하거나 서버 내 갈등을 조장하러 
-                              오신 분은 돌아가 주세요.''', color=0xFFFFFF)
+                              ⚠️게임을 악용하거나 서버 내 갈등을 조장하러 
+                                오신 분은 돌아가 주세요.''', color=0xFFFFFF)
         embed.set_image(url="https://i.imgur.com/UqHsBXR.png")
         embed.set_thumbnail(url="https://i.imgur.com/SpIFEgs.png")
         await message.channel.send("", embed=embed)
