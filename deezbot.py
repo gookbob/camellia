@@ -20,9 +20,13 @@ client = discord.Client()
 async def on_ready():
     print(client.user.id)
     print("ready")
-    game = discord.Game("카밀리아 하는")
+    game = discord.Game("카밀리아")
     await client.change_presence(status=discord.Status.online, activity=game)
-
+    
+@client.event
+async def on_message(message):
+    if message.content.startswith("테스트"):
+        await message.channel.send("")
 
 
 access_token = os.environ["BOT_TOKEN"]
