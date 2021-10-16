@@ -29,7 +29,7 @@ async def on_message(message):
         await message.channel.send("ㅇㅇ")
 
     if message.content == "임베드":
-        embed = discord.Embed(title="카멜리아 스토리에 오신 것을 환영합니다.", description="🌸를 누르시면 멤버 권한이 들어옵니다.", color=0x000000)
+        embed = discord.Embed(title="카멜리아 스토리에 오신 것을 환영합니다.", description="🌸를 누르시면 멤버 권한이 들어옵니다.", color=0xFF00FF)
         embed.set_image(url="https://i.imgur.com/UqHsBXR.png")
         embed.set_thumbnail(url="https://i.imgur.com/SpIFEgs.png")
         await message.channel.send("", embed=embed)
