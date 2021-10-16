@@ -26,7 +26,7 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if message.content.startswith("테스트"):
-        await message.channel.send("")
+        await message.channel.send("ㅇㅇ")
 
 
 access_token = os.environ["BOT_TOKEN"]
